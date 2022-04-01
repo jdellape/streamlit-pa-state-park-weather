@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import pymongo
 import pydeck as pdk
-import os
 
 st.title('PA State Park 🌧️ Watch')
 
@@ -13,7 +12,7 @@ WEEKEND_DAY_NAMES = ['Friday', 'Saturday', 'Sunday']
 # Uses st.experimental_singleton to only run once.
 @st.experimental_singleton
 def init_connection():
-    return pymongo.MongoClient(os.environ.get('DB_URI'))
+    return pymongo.MongoClient(st.secrets["DB_URI"])
 
 client = init_connection()
 
