@@ -3,7 +3,11 @@ import pandas as pd
 import pymongo
 import pydeck as pdk
 
+#Provide a description of the app's purpose
 st.title('PA State Park 🌧️ Watch')
+with st.expander("Why did I create this App?"):
+     st.write("My wife and I enjoy hiking and camping. However, we do not like spending our weekends outside in rainy weather. We live in Pennsylvania. My wife was recently looking for a state parks to visit, but was concerned about the chance of rain. And so began her manual search for pennsylvania state parks \
+and the weather forecast at each location, most importantly, the chance of rain. This streamlit app is to make it easier to enjoy weekends outside without wasting so much time manually checking weather forecasts.")
 
 WEEKEND_DAY_NAMES = ['Friday', 'Saturday', 'Sunday']
 
@@ -128,3 +132,8 @@ st.dataframe(pivot_df(filtered_df, days_selected))
 
 st.header("Full Forecast Data")
 st.dataframe(long_df)
+
+with st.expander("What are technical the components supporting this App?"):
+    st.markdown("* Data Storage: MongoDB Atlas (https://www.mongodb.com/atlas) * Weather forecast retrieval: openweathermap api (https://openweathermap.org/api/one-call-api)  \
+* Application Framework for Presenting this data to you: streamlit (https://streamlit.io/) \
+* Free service tiers are available and utilized for all components!")
