@@ -134,6 +134,11 @@ st.header("Full Forecast Data")
 st.dataframe(long_df)
 
 with st.expander("What are technical the components supporting this App?"):
-    st.markdown("* Data Storage: MongoDB Atlas (https://www.mongodb.com/atlas) * Weather forecast retrieval: openweathermap api (https://openweathermap.org/api/one-call-api)  \
-* Application Framework for Presenting this data to you: streamlit (https://streamlit.io/) \
-* Free service tiers are available and utilized for all components!")
+    st.markdown(
+    """
+    - **Data Storage:** MongoDB Atlas (https://www.mongodb.com/atlas) 
+    - **Weather forecast retrieval:** openweathermap api (https://openweathermap.org/api/one-call-api)
+    - **Application Framework:** streamlit (https://streamlit.io/) 
+    - **Free** service tiers are available and utilized for all components!
+    """
+    )
