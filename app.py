@@ -133,7 +133,7 @@ st.dataframe(pivot_df(filtered_df, days_selected))
 st.header("Full Forecast Data")
 st.dataframe(long_df)
 
-with st.expander("What are technical the components supporting this App?"):
+with st.expander("What are the technical components supporting this App?"):
     st.markdown(
     """
     - **Data Storage:** MongoDB Atlas (https://www.mongodb.com/atlas) 
